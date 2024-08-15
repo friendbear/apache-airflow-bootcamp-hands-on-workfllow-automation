@@ -1,0 +1,1 @@
+delete from personal_info where id= '{{params.id}}'

@@ -1,0 +1,9 @@
+
+select * from dag;
+select * from dag_code;
+select * from dag_run;
+select * from dag_tag;
+select * from log order by dttm desc;
+select * from task_fail;
+select * from variable;
+select * from xcom;

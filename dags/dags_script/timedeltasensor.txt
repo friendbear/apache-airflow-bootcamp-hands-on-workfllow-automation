@@ -1,0 +1,35 @@
+The `TimeDeltaSensor` in Apache Airflow is an operator used to wait for a certain amount of time before allowing the workflow to proceed. It essentially pauses the execution of the DAG until a specified time duration has elapsed.
+
+This operator is particularly useful in scenarios where you need to wait for an external event or process to complete before proceeding with the subsequent tasks in your workflow. For example, you might use a `TimeDeltaSensor` to wait for a file to be uploaded to a specific location, for a database replication process to finish, or for an API call to return data.
+
+Here's a basic example of how you might use the `TimeDeltaSensor` in an Airflow DAG:
+
+```python
+from airflow import DAG
+from airflow.operators.sensor import TimeDeltaSensor
+from datetime import datetime, timedelta
+
+default_args = {
+    'owner': 'airflow',
+    'start_date': datetime(2024, 5, 3),
+}
+
+dag = DAG('example_timedelta_sensor', default_args=default_args, schedule_interval=None)
+
+wait_task = TimeDeltaSensor(
+    task_id='wait_for_delay',
+    delta=timedelta(minutes=3),  # Wait for 1 hour
+    mode='poke',  # The mode in which the sensor checks for the elapsed time
+    poke_interval=2,  # How often (in seconds) the sensor should check the time
+    timeout=180,  # Maximum time (in seconds) to wait before considering the sensor task as failed
+    dag=dag,
+)
+
+# Other tasks can follow after the wait_task
+```
+
+In this example, the `TimeDeltaSensor` is created with a task ID of 'wait_for_delay'. It's configured to wait for 3 min (`delta=timedelta(minutes=1)`) before proceeding with the workflow. The `mode` parameter specifies that the sensor should continuously check (`poke`) the elapsed time until the specified duration has passed. The `poke_interval` parameter sets how often (in seconds) the sensor should check the time, and the `timeout` parameter specifies the maximum time (in seconds) to wait before considering the sensor task as failed.
+
+Once the specified time duration has elapsed, the `TimeDeltaSensor` task completes, and the workflow can continue with the subsequent tasks.
+
+

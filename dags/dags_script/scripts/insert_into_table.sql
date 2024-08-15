@@ -1,0 +1,1 @@
+insert into personal_info values('1','sam','23','gkp','govt'),('2','sanjay','25','vaishali','private')

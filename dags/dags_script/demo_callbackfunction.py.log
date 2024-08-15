@@ -1,0 +1,23 @@
+[2024-05-06T15:41:43.323+0530] {processor.py:161} INFO - Started process (PID=493357) to work on /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:41:43.325+0530] {processor.py:830} INFO - Processing file /home/sriw/airflow/dags/demo_callbackfunction.py for tasks to queue
+[2024-05-06T15:41:43.327+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:41:43.326+0530] {dagbag.py:540} INFO - Filling up the DagBag from /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:41:43.344+0530] {processor.py:840} INFO - DAG(s) 'demo_callbackfunction' retrieved from /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:41:43.346+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:41:43.346+0530] {dagbag.py:540} INFO - Filling up the DagBag from /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:41:43.423+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:41:43.422+0530] {processor.py:431} INFO - Running SLA Checks for demo_callbackfunction
+[2024-05-06T15:41:43.548+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:41:43.548+0530] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-05-06T15:41:43.582+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:41:43.581+0530] {dag.py:3834} INFO - Setting next_dagrun for demo_callbackfunction to 2024-05-06 10:09:00+00:00, run_after=2024-05-06 10:12:00+00:00
+[2024-05-06T15:41:43.631+0530] {processor.py:183} INFO - Processing /home/sriw/airflow/dags/demo_callbackfunction.py took 0.313 seconds
+[2024-05-06T15:42:13.744+0530] {processor.py:161} INFO - Started process (PID=493881) to work on /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:42:13.752+0530] {processor.py:830} INFO - Processing file /home/sriw/airflow/dags/demo_callbackfunction.py for tasks to queue
+[2024-05-06T15:42:13.754+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:13.754+0530] {dagbag.py:540} INFO - Filling up the DagBag from /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:42:13.773+0530] {processor.py:840} INFO - DAG(s) 'demo_callbackfunction' retrieved from /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:42:13.774+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:13.774+0530] {dagbag.py:540} INFO - Filling up the DagBag from /home/sriw/airflow/dags/demo_callbackfunction.py
+[2024-05-06T15:42:13.815+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:13.814+0530] {processor.py:431} INFO - Running SLA Checks for demo_callbackfunction
+[2024-05-06T15:42:13.901+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:13.899+0530] {processor.py:529} INFO - Calling SLA miss callback <function sla_callback at 0x7fdc25cb2b00>
+[2024-05-06T15:42:13.902+0530] {logging_mixin.py:188} INFO - sla_callback : SLA miss happened
+[2024-05-06T15:42:13.918+0530] {logging_mixin.py:188} WARNING - /home/sriw/airflow-env/lib/python3.10/site-packages/airflow/utils/email.py:154 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2024-05-06T15:42:13.919+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:13.918+0530] {email.py:270} INFO - Email alerting: attempt 1
+[2024-05-06T15:42:15.932+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:15.931+0530] {email.py:281} INFO - Sent an alert email to ['sriwworldofcoding@gmail.com']
+[2024-05-06T15:42:17.755+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:17.754+0530] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-05-06T15:42:17.786+0530] {logging_mixin.py:188} INFO - [2024-05-06T15:42:17.785+0530] {dag.py:3834} INFO - Setting next_dagrun for demo_callbackfunction to 2024-05-06 10:12:00+00:00, run_after=2024-05-06 10:15:00+00:00
+[2024-05-06T15:42:17.826+0530] {processor.py:183} INFO - Processing /home/sriw/airflow/dags/demo_callbackfunction.py took 4.088 seconds
