@@ -19,7 +19,7 @@ def third_func():
     print("This func is executed by the third task")
 
 with DAG(
-    "depends_on_past",
+    "depends_on_past", # 💫 this option can't running when failed. not running after tasks.
     default_args=default_args,
     schedule_interval=timedelta(1),
     catchup=False,
